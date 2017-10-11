@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="QueryResult"
+    targetNamespace="http://tempuri.org/QueryResult.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/QueryResult.xsd"
+    xmlns:mstns="http://tempuri.org/QueryResult.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="QueryResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="classroom">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CrowdRate" type="xs:int" />
+              <xs:element name="AvaliableTime" type="xs:int" />
+              <xs:element name="CurrentPeople" type="xs:int" />
+            </xs:sequence>
+            <xs:attribute name="RoomName" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
